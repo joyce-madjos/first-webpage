@@ -1,0 +1,255 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Garamond, serif;
+  width: 100vw;
+  height: 100vh;
+  margin: 0rem;
+  overflow: hidden;
+  background-image: linear-gradient(to right, #ffea20, #8dcbe6);
+}
+
+.container {
+  display: flex;
+  max-width: 100%;
+  max-height: 90%;
+  height: 80vh;
+  width: 100vw;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+}
+
+.firstItem,
+.secondItem,
+.thirdItem {
+  border: 2px #9df1df;
+  border-radius: 7px;
+  height: 85%;
+  width: 25%;
+  overflow: auto;
+  background-color: #9df1df;
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.firstItem {
+  border-style: solid;
+  position: relative;
+  z-index: 99;
+}
+
+.secondItem {
+  border-style: dotted;
+}
+
+.thirdItem {
+  border-style: groove;
+  position: relative;
+  z-index: 99;
+}
+
+img {
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+
+p {
+  text-align: justify;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.winkCat {
+  display: none;
+}
+
+.firstItem:hover + .winkCat {
+  display: block;
+  position: absolute;
+  top: 65px;
+  left: 350px;
+  overflow: clip;
+  max-width: 100%;
+  max-height: auto;
+}
+
+.secondWinkCat {
+    display: none;
+  }
+  
+  .thirdItem:hover + .secondWinkCat {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 700px;
+    overflow: clip;
+    max-width: 100%;
+    max-height: auto;
+  }
+
+.catAngry{
+    display: none;
+}
+
+.secondItem:hover + .catAngry {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 450px;
+    overflow: clip;
+    max-width: 100%;
+    max-height: auto;
+  }
+
+  .catAngry:hover{
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 450px;
+    overflow: clip;
+    max-width: 100%;
+    max-height: auto;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  animation: header-animation 4s linear infinite;
+  font-family: "League Spartan", sans-serif;
+}
+
+.firstLetter {
+  --color-1: #df8453;
+  --color-2: #3d8dae;
+  --color-3: #ffea20;
+}
+
+.secondLetter {
+  --color-1: #dbad4a;
+  --color-2: #accfcb;
+  --color-3: #17494d;
+}
+
+.thirdLetter {
+  --color-1: #accfcb;
+  --color-2: #ffea20;
+  --color-3: #accfcb;
+}
+
+.fourthLetter {
+  --color-1: #3d8dae;
+  --color-2: #df8453;
+  --color-3: #ffea20;
+}
+button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    font-size: 40px;
+}
+
+@keyframes header-animation {
+  0% {
+    color: var(--color-1);
+  }
+  32% {
+    color: var(--color-1);
+  }
+  33% {
+    color: var(--color-2);
+  }
+  65% {
+    color: var(--color-2);
+  }
+  66% {
+    color: var(--color-3);
+  }
+  99% {
+    color: var(--color-3);
+  }
+  100% {
+    color: var(--color-1);
+  }
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+footer > p{
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+}
+
